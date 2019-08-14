@@ -33,10 +33,11 @@ export const reducer = (state = initialState, action) => {
             }
 
         case REMOVE_FEATURE:
+            // console.log('REMOVE feature has been invoked', action.payload.id);
             return {
                 ...state,
-                cars: {
-                    ...state.cars,
+                car: {
+                    ...state.car,
                     features: [
                         ...state.car.features.filter(feature => feature.id !== action.payload.id)
                     ]
