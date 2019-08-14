@@ -29,7 +29,10 @@ export const reducer = (state = initialState, action) => {
                     ...state.car.features,
                     action.payload
                     ]
-                }
+                },
+                store: [
+                    ...state.store.filter(feature => feature.id !== action.payload.id)
+                ]
             }
 
         case REMOVE_FEATURE:
@@ -41,7 +44,11 @@ export const reducer = (state = initialState, action) => {
                     features: [
                         ...state.car.features.filter(feature => feature.id !== action.payload.id)
                     ]
-                }
+                },
+                store: [
+                    ...state.store,
+                    action.payload
+                ]
             }
 
         case UPDATE_PRICE: 
