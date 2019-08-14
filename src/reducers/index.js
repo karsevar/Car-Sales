@@ -22,10 +22,13 @@ export const reducer = (state = initialState, action) => {
        case ADD_FEATURE:
             return {
                 ...state,
-                features: [
+                car: {
+                    ...state.car,
+                    features: [
                     ...state.features,
                     action.payload
-                ]
+                    ]
+                }
             }
         
         default: 
