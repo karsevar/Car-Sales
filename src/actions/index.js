@@ -19,7 +19,7 @@ export const removeFeature = feature => {
 
 export const UPDATE_PRICE = 'UPDATE_PRICE';
 
-export const updatedAdditionalPrice = feature => {
+export const updateAdditionalPrice = feature => {
     return {
         type: UPDATE_PRICE,
         payload: feature
