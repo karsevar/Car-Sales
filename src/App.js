@@ -1,15 +1,9 @@
 import React from 'react';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-
-import {reducer} from './reducers';
-
-const store = createStore(reducer);
 
 const App = () => {
   // const state = {
@@ -38,7 +32,6 @@ const App = () => {
   };
 
   return (
-    <Provider store={store}>
       <div className="boxes">
         <div className="box">
           {/* <Header car={state.car} /> */}
@@ -49,7 +42,6 @@ const App = () => {
           {/* <Total car={state.car} additionalPrice={state.additionalPrice} /> */}
         </div>
       </div>
-    </Provider>
   );
 };
 
