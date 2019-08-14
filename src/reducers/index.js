@@ -24,7 +24,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 features: [
                     ...state.features,
-                    payload
+                    action.payload
                 ]
             }
         
