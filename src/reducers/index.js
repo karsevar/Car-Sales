@@ -1,4 +1,4 @@
-import {ADD_FEATURE, REMOVE_FEATURE, UPDATE_PRICE} from '../actions';
+import {ADD_FEATURE, REMOVE_FEATURE, UPDATE_PRICE, MINUS_PRICE} from '../actions';
 
 const initialState = {
     additionalPrice: 0,
@@ -48,6 +48,12 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 additionalPrice: state.additionalPrice + action.payload.price
+            }
+
+        case MINUS_PRICE:
+            return {
+                ...state,
+                additionalPrice: state.additionalPrice - action.payload.price
             }
         
         default: 

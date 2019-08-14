@@ -25,3 +25,12 @@ export const updateAdditionalPrice = feature => {
         payload: feature
     }
 }
+
+export const MINUS_PRICE = 'MINUS_PRICE';
+
+export const minusAdditionalPrice = feature => {
+    return {
+        type: MINUS_PRICE,
+        payload: feature
+    }
+}
