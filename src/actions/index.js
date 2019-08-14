@@ -16,3 +16,12 @@ export const removeFeature = feature => {
         payload: feature
     }
 }
+
+export const UPDATE_PRICE = 'UPDATE_PRICE';
+
+export const updatedAdditionalPrice = feature => {
+    return {
+        type: UPDATE_PRICE,
+        payload: feature
+    }
+}
